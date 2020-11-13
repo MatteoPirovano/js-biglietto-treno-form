@@ -5,9 +5,6 @@
 // Prezzo calcolato
 // Categoria selezionata dall'utente (offerta)
 
-// var nomeCognome= document.getElementById('name');
-// var chilometri = document.getElementById('km');
-// var anni = document.getElementById('età').value;
 
 //     var prezzoAlChilometro = 0.21;
 //     var minorenni = 18;
@@ -19,16 +16,8 @@
 //     prezzo = (chilometri * prezzoAlChilometro).toFixed(2);
 //
 //     if (!isNaN(anni) && !isNaN(chilometri)) {
-//       if (anni < minorenni) {
-//         prezzoScontantosconto =  (prezzo - ((prezzo * sconto1) / 100)).toFixed(2);
-//         document.getElementById('sconto').innerHTML = prezzoScontantosconto;
-//       } else if (anni >= anziani) {
-//         prezzoScontantosconto =  (prezzo - ((prezzo * sconto2) / 100)).toFixed(2);
-//         document.getElementById('sconto').innerHTML = prezzoScontantosconto;
-//       } else {
-//         document.getElementById('sconto').innerHTML = prezzo;
-//       }
-//     }
+
+
 //
 //   }
 // )
@@ -36,8 +25,24 @@ var calcolaBottone = document.getElementById('bottone')
 calcolaBottone.addEventListener("click",
   function() {
     var nomeCognome= document.getElementById('name').value;
-    console.log(nomeCognome)
-    var numeroKm = document.getElementById('km').value;
-    console.log(numeroKm)
+    console.log(nomeCognome);
+    var chilometri = document.getElementById('km').value;
+    console.log(chilometri);
+    var anni = document.getElementById('anni').value;
+    console.log(anni);
+    var prezzoAlChilometro = 0.21;
+    var prezzo = (chilometri * prezzoAlChilometro).toFixed(2);
+    console.log(prezzo)
+    var prezzoScontanto;
+
+    if (anni ==  "minorenni") {
+      prezzoScontanto =  (prezzo - (prezzo * 0.2)).toFixed(2);
+      document.getElementById('sconto').innerHTML = prezzoScontanto;
+    } else if (anni == "senior" ) {
+      prezzoScontanto =  (prezzo - (prezzo * 0.4)).toFixed(2);
+      document.getElementById('sconto').innerHTML = prezzoScontanto;
+    } else {
+      document.getElementById('sconto').innerHTML = prezzo;
+    }
   }
 )
