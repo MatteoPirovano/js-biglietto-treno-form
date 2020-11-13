@@ -12,8 +12,11 @@
   <main>
     <div class="container">
       <h1>Calcola il prezzo del tuo biglietto:</h1>
-      <input type="text" id="name" placeholder="inserisci il tuo nome">
-      <input type="text" id="km" placeholder="quanti chilometri vuoi fare?">
+      <label for="name">scrivi il tuo nome</label>
+      <input id="name" type="text" name="name" placeholder="inserisci il tuo nome">
+      <label for="km">chilometri da percorrere</label>
+      <input id="km" type="number" name="km" placeholder="quanti chilometri vuoi fare?">
+      <label for="età">fascia d'età</label>
       <select id="età">
         <option value="minorenni">minorenni</option>
         <option value="maggiorenni">maggiorenni</option>
