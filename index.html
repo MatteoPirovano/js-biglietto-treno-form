@@ -9,24 +9,38 @@
   <title>Biglietto treno</title>
 </head>
 <body>
+  <!-- MAIN -->
   <main>
-    <div class="container">
+    <div class="form"> <!-- form -->
       <h1>Calcola il prezzo del tuo biglietto:</h1>
-      <label for="name">scrivi il tuo nome</label>
+      <label for="name">Scrivi il tuo nome:</label>
       <input id="name" type="text" name="name" placeholder="inserisci il tuo nome">
-      <label for="km">chilometri da percorrere</label>
+      <label for="km">Chilometri da percorrere:</label>
       <input id="km" type="number" name="km" placeholder="quanti chilometri vuoi fare?">
-      <label for="anni">fascia d'età</label>
+      <label for="anni">Fascia d'età:</label>
       <select id="anni" name="anni">
         <option value="minorenni">minorenni</option>
         <option value="maggiorenni">maggiorenni</option>
         <option value="senior">senior</option>
       </select>
-      <button id="bottone" type="button" name="Calcola">calcola</button>
-      <span id="sconto"></span>
+      <div class="buttons">
+        <button id="bottone" type="button" name="Calcola">calcola</button>
+        <button id="annulla" type="button" name="Calcola">annulla</button>
+      </div>
+      <a href=""><img  id="gif"  src="https://www.animatedimages.org/data/media/75/animated-train-image-0080.gif" border="0" alt="animated-train-image-0080" /></a>
+    </div>
+
+    <div id="dati_biglietto" class="hidden"> <!-- biglietto -->
+      <h2>Dettagli biglietto:</h2>
+      <h4>Nome e cognome: <span id="nome_utente"></span></h4>
+      <h4>Nessuna offerta: <span id="offerta"></span></h4>
+      <h4>Carrozza: <span id="carrozza"></span></h4>
+      <h4>NumeroCP: <span id="CP"></span></h4>
+      <h4>Prezzo: €<span id="sconto"></span></h4>
       <a href=""><img src="https://www.gifanimate.com/data/media/75/treno-immagine-animata-0043.gif" border="0" alt="treno-immagine-animata-0043" /></a>
     </div>
   </main>
+  <!-- /MAIN -->
   <script src="js/script.js" charset="utf-8"></script>
 </body>
 </html>

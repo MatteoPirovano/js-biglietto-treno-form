@@ -4,6 +4,7 @@
   padding: 0;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
+
 }
 body {
   background-image: url("../img/hyperloop.jpg");
@@ -19,34 +20,71 @@ main {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
 }
-.container {
+.form {
   height: 400px;
   width: 400px;
+  padding: 5px;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.8);
+  margin: 0 5px;
+  background-color: rgba(209,0,24,0.5);
 }
-h1 {
-  padding: 10px;
-  font-size: 2em;
+
+#dati_biglietto {
+  height: 400px;
+  min-width: 400px;
+  padding: 5px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  margin: 0 5px;
+  background-color: rgba(255,255,255,0.5);
+}
+.hidden {
+  opacity: 0;
+  transition: 3s;
+}
+.show {
+  opacity: 1;
+  transition: 3s;
+}
+h1, label {
   font-weight: 700;
   text-align:  center;
+  color: white;
 }
-span {
-  padding-top: 50px;
-  font-size: 2.5em;
-  color: lime;
-  align-self: center;
+h1, h2 {
+  font-size: 2em;
+  padding-bottom: 10px;
 }
-a img {
+input, select {
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
+button {
+  border-radius: 5px;
+  padding: 5px;
+}
+h4 {
+  padding: 10px 0;
+  font-size: 1.2em;
+}
+#gif {
+  position: absolute;
+  height:  100px;
+  bottom: 0;
+  transform: translateX(-70%);
+}
+#dati_biglietto a img {
   position: absolute;
   right: -75px;
   bottom: 0;
   animation-name: train;
-  animation-duration: 8s;
+  animation-duration: 20s;
   animation-iteration-count: infinite;
 }
 @keyframes train {
